@@ -5,21 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CST336 About Us</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
         <header>
-    <h1>Team 15</h1>
-    </header>
+        <h1>Team 15</h1>
+        </header>
     <hr>
         <nav> 
-     <a href="index.html">Home</a>
-     <a href="about-us.html">About</a>
-     <a href="contact.html">Contact</a>
+            <div class="navButtonGroup"> 
+                <a href="index.html"><button class="buttonNav">Home</button></a>
+                <a href="about-us.html"><button class="buttonNav active">About</button></a>
+                <a href="contact.html"><button class="buttonNav">Contact</button></a>
+            </div>
         </nav>
         <hr>
         <h1>About our Team</h1>
         <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, odio maiores non hic omnis alias! Sapiente necessitatibus iure obcaecati maiores, error sit consequatur aspernatur architecto doloremque? Dicta molestiae quaerat sapiente.</p>
+        <h4>Here are some things you might like to know about us</h4>
+
+        <table id="tableProperties"> 
+            <tr bgcolor="white">
+                <th style="padding: 5px;"> Programming Languages </th>
+                <th> Years Experience</th>
+            </tr>
+            <tr class="tableSubheading">    
+                <td>Java</td>
+                <td>3</td>
+            </tr>
+            <tr class="tableSubheading">    
+                <td>C++</td>
+                <td>2</td>
+            </tr>
+            <tr class="tableSubheading">
+                <td>PHP</td>
+                <td>1</td>
+            </tr>
+        </table>
+    <h4>Our Common Hobbies</h4>
+        <ul style="color: yellow;">
+            <li> <p>Video games: We all like 7 Days to Die for PC</p></li>
+            <li> <p>Music: We all listen to 101.7 The Beach </p>    </li>
+            <li> <p>Programming: We all attend CST 336 to learn the latest about Internet Programming</p> </li>
+        </ul>
+
         </div>
           <hr>
         </div>
