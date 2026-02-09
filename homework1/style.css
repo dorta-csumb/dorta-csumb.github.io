@@ -1,30 +1,30 @@
-body{
+body {
     background-color: rgb(10, 10, 10);
 }
 
-h1{
+h1 {
     color: white;
     text-align: center;
     font-family: "Orbitron";
 }
 
-h2{
+h2 {
     color: white;
     text-align: center;
     font-family: "Orbitron";
 }
 
-p{
+p {
     color: yellow;
     font-family: sans-serif;
 }
 
-span{
+span {
     color: red;
     font-family: sans-serif;
 }
 
-#teamRow{
+#teamRow {
     flex-wrap: wrap;
     display: flex;
     justify-content: space-evenly;
@@ -33,54 +33,79 @@ span{
     padding: 40px 0;
 }
 
-.center-figure{
+.center-figure {
     text-align: center;
     margin-top: 20px;
 }
 
-.center-figure img{
+.center-figure img {
     border-radius: 8px;
     box-shadow: 0px 0px 12px rgb(0, 255, 0);
     transition: transform 0.3s;
 }
 
-.center-figure img:hover{
+.center-figure img:hover {
     transform: scale(1.05);
 }
+figcaption {
+    color: white;
+    font-family: sans-serif;
+    margin-top: 12px;
+    font-style: oblique;;
+    font-size: 15px;
+    text-shadow: 0 0 12px #00ff11; 
+}
 
-.yellow-list li{
+.yellow-list li {
     color: yellow;
 }
 
-.buttonNav{
+.buttonNav {
     background-color: #222222;
     color: #00ff11;
     font-size: 18px;
+    font-family: sans-serif;
     border-radius: 5%;
-    border-color: #00ff11;
+    border: 2px solid #00ff11;
+    padding: 6px 14px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0px 3px 0px #00aa0c;
 }
 
-.navButtonGroup{
+.navButtonGroup {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.buttonNav.active{
+.buttonNav.active {
     background-color: #00ff11;
     color: #222222;
+    box-shadow: inset 0px 3px 6px #004400; 
+    transform: translateY(2px);
+
 }
 
-.buttonNav:hover{
+.buttonNav:hover {
     background-color: #444444;
     color: #ff0000;
-    border-color: #c0ffc4;
+    border-color: #c0ffc4; 
+    box-shadow: 0px 2px 0px #008807;
 }
 
-h1:hover{
+h1:hover {
     color: red;
 }
 
-h2:hover{
+h2:hover {
     color: red;
 }
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+}   
