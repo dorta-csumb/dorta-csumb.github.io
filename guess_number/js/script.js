@@ -10,6 +10,7 @@ let myLuckyNumber = 7;
 //Global variables
 let randomNumber;
 let attempts = 0;
+let totalAttempts = 7;
 
 //Setting the game over conditions by hiding the Guess button and showing the Reset button
 function gameover() {
@@ -90,5 +91,7 @@ function checkGuess() {
             feedback.textContent = "Guess was low!";
           } 
         }
+        document.querySelector("#guessesRem").textContent = totalAttempts - attempts; //update the display for remaining guesses
+
     }
 
