@@ -4,6 +4,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    background-color: black;
 
 }
 
@@ -72,4 +73,5 @@ p {
     color: white;
     text-align: center;
     font-family: sans-serif
+    
 }
