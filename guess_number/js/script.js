@@ -11,6 +11,8 @@ let myLuckyNumber = 7;
 let randomNumber;
 let attempts = 0;
 let totalAttempts = 7;
+let totalWins = 0;
+let totalLosses = 0;
 
 //Setting the game over conditions by hiding the Guess button and showing the Reset button
 function gameover() {
@@ -45,6 +47,8 @@ function initializeGame() { //This function is like saying "Let's start the game
 
   document.querySelector("#guesses").textContent = ""; //clearing the previous guesses display
 
+  document.querySelector("#guessesRem").textContent = ""; //clearing the remaining guesses display
+
    //adding focus to textbox
    document.querySelector("#playerGuess").focus();
 
@@ -77,6 +81,7 @@ function checkGuess() {
     if (guess == randomNumber) { //if the guess is correct
         feedback.textContent = "You guessed it! You won!";//display winning message
         feedback.style.color = "darkgreen";//in green text color
+        document.querySelector("#totalWins").textContent = ++totalWins; //increment total wins and update the display for total wins
         gameover();//call the gameover function to end the game
     }    else {
           
