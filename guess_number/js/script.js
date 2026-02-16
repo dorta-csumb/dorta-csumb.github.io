@@ -80,10 +80,11 @@ function checkGuess() {
     feedback.style.color = "orange"; 
     if (guess == randomNumber) { //if the guess is correct
         feedback.textContent = "You guessed it! You won!";//display winning message
-        feedback.style.color = "darkgreen";//in green text color
+        feedback.style.color = "lightgreen";
+        
         document.querySelector("#totalWins").textContent = ++totalWins; //increment total wins and update the display for total wins
         gameover();//call the gameover function to end the game
-        
+
     }    else {
           document.querySelector("#guesses").textContent += guess + " "; //display previous guesses and add the current guess to the list
           if (attempts == 7) {
