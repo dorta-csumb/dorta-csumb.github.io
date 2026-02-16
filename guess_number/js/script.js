@@ -83,13 +83,15 @@ function checkGuess() {
         feedback.style.color = "darkgreen";//in green text color
         document.querySelector("#totalWins").textContent = ++totalWins; //increment total wins and update the display for total wins
         gameover();//call the gameover function to end the game
+        
     }    else {
-          
           document.querySelector("#guesses").textContent += guess + " "; //display previous guesses and add the current guess to the list
           if (attempts == 7) {
             feedback.textContent = "Sorry, you lost!";
             feedback.style.color = "red";
+            document.querySelector("#totalLosses").textContent = ++totalLosses; //increment total losses and update the display for total losses
             gameover();
+
           } else if (guess > randomNumber) {
             feedback.textContent = "Guess was high!";
           } else {
