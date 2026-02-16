@@ -10,6 +10,14 @@ let myLuckyNumber = 7;
 let randomNumber;
 let attempts = 0;
 
+//Setting the game over conditions by hiding the Guess button and showing the Reset button
+function gameover() {
+    let guessBtn = document.querySelector("#guessBtn");
+    let resetBtn = document.querySelector("#resetBtn");
+    guessBtn.style.display = "none";
+    resetBtn.style.display = "inline"; 
+}
+
 initializeGame();
 
 function initializeGame() {
@@ -21,6 +29,9 @@ function initializeGame() {
   
    //adding focus to textbox
    document.querySelector("#playerGuess").focus();
+
+   //This encourage ID shows how to change the text content of an element in the DOM (in this case h1)
+   document.querySelector("#insult").textContent = "Player, you are a great person!";
 }
 
 console.log(randomNumber); 
@@ -31,10 +42,33 @@ console.log(randomNumber);
 
 
 function checkGuess() {
-    let guess = document.querySelector("#playerGuess").value;
+    let feedback = document.querySelector("#feedback");
+    feedback.textContent = "";
+    let guess = document.querySelector("#playerGuess").value; 
     console.log("Player guess: " + guess);
     if (guess < 1 || guess > 99) {
-        alert("Guess out of range!");
+        
+        feedback.textContent = "Enter a number between 1 and 99";
+        feedback.style.color = "red";
         return;
     } 
-}
+    attempts++;
+    console.log("Attempts: " + attempts);
+    feedback.style.color = "orange";
+    if (guess == randomNumber) {
+        feedback.textContent = "You guessed it! You won!";
+        feedback.style.color = "darkgreen";
+        gameover();
+    }    else {
+          if (attempts == 7) {
+            feedback.textContent = "Sorry, you lost!";
+            feedback.style.color = "red";
+            gameover();
+          } else if (guess > randomNumber) {
+            feedback.textContent = "Guess was high!";
+          } else {
+            feedback.textContent = "Guess was low!";
+          } 
+        }
+    }
+
