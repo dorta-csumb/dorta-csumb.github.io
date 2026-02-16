@@ -79,7 +79,7 @@ function checkGuess() {
     console.log("Attempts: " + attempts); 
     feedback.style.color = "orange"; 
     if (guess == randomNumber) { //if the guess is correct
-        feedback.textContent = "You guessed it! You won!";//display winning message
+        feedback.textContent = "Perfect Signal! Rescue Ops bombed the zombies outside. You survived another day!";//display winning message
         feedback.style.color = "lightgreen";
         
         document.querySelector("#totalWins").textContent = ++totalWins; //increment total wins and update the display for total wins
@@ -88,15 +88,15 @@ function checkGuess() {
     }    else {
           document.querySelector("#guesses").textContent += guess + " "; //display previous guesses and add the current guess to the list
           if (attempts == 7) {
-            feedback.textContent = "Sorry, you lost!";
+            feedback.textContent = "The tower is locked! Zombies breached the door. You died.";
             feedback.style.color = "red";
             document.querySelector("#totalLosses").textContent = ++totalLosses; //increment total losses and update the display for total losses
             gameover();
 
           } else if (guess > randomNumber) {
-            feedback.textContent = "Guess was high!";
+            feedback.textContent = "Signal too high. Interference spike. Zombies heard you.";
           } else {
-            feedback.textContent = "Guess was low!";
+            feedback.textContent = "Signal too low. Static detected. Zombies are stirring";
           } 
         }
         document.querySelector("#guessesRem").textContent = totalAttempts - attempts; //update the display for remaining guesses

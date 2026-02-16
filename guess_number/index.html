@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Guess a Number </title>
+        <title> CyberSurvivor </title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     </head>
     <body>
 
         <header>
-            <h1>Guess the Number!</h1>
-            <h2>Guess a number between 1 and 99 in seven attempts!</h2>
+            <h1>CyberSurvivor:</h1>
+            <h2>Radio Tower Reboot</h2>
+            <h2>ENTER SIGNAL FREQUENCY (1–99)</h2>
         </header>
-        <p>Remember: Don't forget you're doing a great job!</p>
+        <hr>
+        <p>Tune the emergency broadcast station before the zombies zero in on your location from the noise.</p>
+        <p>7 calibration attempts before tower auto-locks and zombies breach the door.</p> 
         <br>
         
         <div id="main">
@@ -21,27 +25,46 @@
           <button id="resetBtn"> Reset </button> 
           <div id="feedback"></div>
         
-        <div> Previous Guesses: 
+          <div> Previous Guesses: 
             <span id="guesses"></span>
-        </div>
+          </div>
 
-        <div> Guesses Remaining: 
+          <div> Guesses Remaining: 
             <span id="guessesRem"></span>
-        </div>
+          </div>
 
         </div>
-        
+        <hr>
+
         <!--display text in H1 tag using #ID in JavaScript-->
-        <h1 id="encourage"></h1>  
-
-        <div> Total Wins: 
-            <span id="totalWins"></span>
-        </div>
-
-        <div> Total Losses: 
-            <span id="totalLosses"></span>
-        </div>
         
+        <div id="scoreCSS"> 
+            <h1 id="encourage"></h1>  
+
+            <div id="totalWinCSS"> Times Survived: 
+             <span id="totalWins"></span>
+            </div>
+
+            <div id="totalLossCSS"> Times Died: 
+             <span id="totalLosses"></span>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr>
+    <footer>
+        <br>
+        <img src="img/csumb.jpg" style="width: 200px; height: auto;" alt="the CSUMB logo and sea otter">
+        <br>
+        <span id="footer">CST336 Internet Programming. David Orta 2026©</span>
+        <br><br>
+    </footer>
         
         
         <!-- <script>alert("hi")</script> -->

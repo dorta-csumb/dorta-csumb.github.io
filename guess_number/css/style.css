@@ -1,25 +1,70 @@
-h1{
-    color:aqua
+body {
+    background-color: rgb(10, 10, 10);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: "Orbitron";
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-family: "Orbitron";
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px green solid;
+    border-radius: 5px;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+p {
+    color: yellow;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#main {
+    color: yellow;
+    font-family: sans-serif;
+    text-align: center;
+    border: 2px green solid;
+    border-radius: 5px;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
     
 }
 
-h2{
-    color: aqua;
+#totalWinCSS {
+    color: rgb(0, 255, 0);
+    font-family: "Orbitron";
+    font-size: 20px;
 }
 
-p{
-    color: aqua;
+#totalLossCSS {
+    color: red;
+    font-family:"Orbitron";
+    font-size: 20px;
 }
 
-div{
-    color: rgb(255, 255, 255);
+#scoreCSS {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px green solid;
+    border-radius: 5px;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;    
 }
 
-body{
-    background-color: black;
-}
-
-/* to change all text fonts to Helvetica the following code can be used:   */
-*{
-    font-family: sans-serif;
+#footer {
+    color: white;
+    text-align: center;
+    font-family: sans-serif
 }
