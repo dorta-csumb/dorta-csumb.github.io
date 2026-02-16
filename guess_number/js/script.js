@@ -94,9 +94,9 @@ function checkGuess() {
             gameover();
 
           } else if (guess > randomNumber) {
-            feedback.textContent = "Signal too high. Interference spike. Zombies heard you.";
+            feedback.textContent = "Signal TOO HIGH. Interference spike. Zombies heard you.";
           } else {
-            feedback.textContent = "Signal too low. Static detected. Zombies are stirring";
+            feedback.textContent = "Signal TOO LOW. Static detected. Zombies are stirring";
           } 
         }
         document.querySelector("#guessesRem").textContent = totalAttempts - attempts; //update the display for remaining guesses
