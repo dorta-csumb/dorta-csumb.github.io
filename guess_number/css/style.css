@@ -45,7 +45,27 @@ p {
     margin: 0 auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.2);
-    
+}
+
+#fbBox {
+    border-style: outset;
+    border-width: 5px;
+    display: inline-block;
+    background-color: black;
+    border-color: goldenrod;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+#feedback {
+    display: block; /*this creates a clean block for inline elements*/
+    white-space: pre-line; /*this line respects \n line breaks*/
+    font-size: 12px;
+    /* background-color: black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px; */
 }
 
 #scoreCSS {

@@ -35,6 +35,10 @@ function initializeGame() { //This function is like saying "Let's start the game
   //hiding the Reset button
   document.querySelector("#resetBtn").style.display = "none";
 
+  //hiding the feedback id and div fbBox background styling BACKGROUND OF FEEDBACK & fbBOX----------
+  document.querySelector("#feedback").style.display = "none";
+  document.querySelector("#fbBox").style.display = "none";
+
   //showing the Guess button
   document.querySelector("#guessBtn").style.display = "inline";
 
@@ -79,7 +83,10 @@ function checkGuess() {
   console.log("Attempts: " + attempts);
   feedback.style.color = "orange";
   if (guess == randomNumber) { //if the guess is correct
-    feedback.textContent = "Perfect Signal! Rescue Ops bombed some zombies outside. You survived -- keep going!";//display winning message
+
+    document.querySelector("#fbBox").style.display = "block"; //SHOW the div box -- was inline switching to block
+    document.querySelector("#feedback").style.display = "block"; //SHOW the feedback text
+    feedback.textContent = "Perfect Signal! \nRescue Ops bombed some zombies outside. \nYou survived -- keep going!";//display winning message
     feedback.style.color = "lightgreen";
 
     document.querySelector("#totalWins").textContent = ++totalWins; //increment total wins and update the display for total wins
@@ -87,19 +94,28 @@ function checkGuess() {
 
   } else {
     document.querySelector("#guesses").textContent += guess + " "; //display previous guesses and add the current guess to the list
-    if (attempts == 7) {
-      feedback.textContent = "The tower is locked! Zombies breached the door. A member died. Try again.";
+    if (attempts == 7) { //if too many guesses
+
+      document.querySelector("#fbBox").style.display = "block"; //SHOW the div box -- was inline switching to block
+      document.querySelector("#feedback").style.display = "block"; //SHOW the feedback text
+      feedback.textContent = "The tower is locked! \nZombies breached the door. A member died. \nTry again.";
       feedback.style.color = "red";
       document.querySelector("#totalLosses").textContent = ++totalLosses; //increment total losses and update the display for total losses
       gameover();
 
-    } else if (guess > randomNumber) {
-      feedback.textContent = "Signal TOO HIGH. Interference spike. Zombies heard you.";
-    } else {
-      feedback.textContent = "Signal TOO LOW. Static detected. Zombies are stirring";
+    } else if (guess > randomNumber) { //if guess is too high numerically
+
+      document.querySelector("#fbBox").style.display = "block"; //SHOW the div box -- was inline switching to block
+      document.querySelector("#feedback").style.display = "block"; //SHOW the feedback text
+      feedback.textContent = "Signal TOO HIGH.\n" + "Interference spike. Zombies heard you.";
+
+    } else { //if guess is too low numerically
+
+      document.querySelector("#fbBox").style.display = "block"; //SHOW the div box -- was inline switching to block
+      document.querySelector("#feedback").style.display = "block"; //SHOW the feedback text
+      feedback.textContent = "Signal TOO LOW.\n" + "Static detected. Zombies are stirring";
     }
   }
   document.querySelector("#guessesRem").textContent = totalAttempts - attempts; //update the display for remaining guesses
-
 }
 
