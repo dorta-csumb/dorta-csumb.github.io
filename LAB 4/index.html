@@ -20,17 +20,22 @@
         Zip Code: <input id="zipCodeInput" type="text"><br>
         City: <span id="cityDisplay"></span>
         <br>
-        Latitude:
+        Latitude: <span id="latDisplay" ></span>
         <br>
-        Longitude:
+        Longitude: <span></span>
         <br><br>
-        State: <select></select><br>
-        Select a County: <select></select><br>
+        State: <select id="stateSelect"></select><br>
+        Select a County: <select id="countySelect"></select><br>
 
-        Desired Username: <input type="text"><br>
-        Password: <input type="password"><br>
+        Desired Username: <input id="usernameInput" type="text"> <span id="usernameMessage"></span> <br>
+
+        Password: <input id="passwordInput" type="password"> <span id="passwordMessage"></span><br>
+
         Type Password Again: <input type="password"><br>
-        <input type="submit" value="Sign up!">
+
+        <input id="submitBtn" type="submit" value="Sign up!">
+        <br>
+        <span id="submitMessage" style="color: red;"></span>
     </fieldset>
 
     <script src="js/script.js"></script>

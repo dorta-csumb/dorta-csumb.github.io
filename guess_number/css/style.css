@@ -48,18 +48,6 @@ p {
     
 }
 
-#totalWinCSS {
-    color: rgb(0, 255, 0);
-    font-family: "Orbitron";
-    font-size: 20px;
-}
-
-#totalLossCSS {
-    color: red;
-    font-family:"Orbitron";
-    font-size: 20px;
-}
-
 #scoreCSS {
     background-color: rgba(255, 255, 255, 0.2);
     border: 2px green solid;
@@ -68,6 +56,24 @@ p {
     margin: 0 auto;
     padding: 20px;    
 }
+
+#totalWinCSS {
+    color: rgb(0, 255, 0);
+    font-family: "Orbitron";
+    font-size: 20px;
+    background-color: black;
+    
+    
+}
+
+#totalLossCSS {
+    color: red;
+    font-family:"Orbitron";
+    font-size: 20px;
+    background-color: black;
+}
+
+
 
 #footer {
     color: white;
