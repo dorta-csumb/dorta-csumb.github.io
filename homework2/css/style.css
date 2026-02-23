@@ -1,0 +1,163 @@
+body {
+    background-color: #111;
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Wrapper holds room on left and UI on right */
+#gameWrapper {
+    display: flex;
+    /* puts room and UI side by side */
+    gap: 20px;
+    /* space between them */
+}
+
+/* ==ROOM SETUP== */
+
+#room {
+    width: 600px;
+    height: 400px;
+    background-color: #222;
+    border: 3px solid #555;
+    position: relative;
+    /* allows absolute children */
+}
+
+/* Player square */
+#player {
+    width: 30px;
+    height: 30px;
+    background-color: cyan;
+    position: absolute;
+    /* moved by JS */
+    left: 100px;
+    top: 100px;
+}
+
+/* Zombies */
+.zombie {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    object-fit: cover;
+    /* keeps image from stretching */
+    object-position: center;
+    /* centers the image in the box */
+    image-rendering: pixelated;
+
+}
+
+/* ZOMBIE POSITIONS */
+#zombie1 {
+    left: 80px;
+    top: 50px;
+}
+
+#zombie2 {
+    left: 400px;
+    top: 80px;
+}
+
+#zombie3 {
+    left: 200px;
+    top: 300px;
+}
+
+/* Containers */
+.container {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    /* shows clickable */
+}
+
+/* ==UI PANEL== */
+
+
+#uiPanel {
+    width: 250px;
+    background-color: #1a1a1a;
+    border: 3px solid #444;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Bars section */
+#bars {
+    margin-bottom: 20px;
+}
+
+.barBox {
+    margin-bottom: 10px;
+}
+
+.barBox span {
+    font-size: 14px;
+}
+
+.barFill {
+    height: 15px;
+    background-color: green;
+    width: 100%;
+    /* JS will shrink this */
+    margin-top: 3px;
+}
+
+/* Inventory */
+#inventory {
+    margin-bottom: 20px;
+}
+
+#inventoryList {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 14px;
+}
+
+/* Buttons */
+#actions {
+    margin-bottom: 20px;
+}
+
+#actions button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #333;
+    color: white;
+    border: 2px solid #666;
+    cursor: pointer;
+}
+
+#actions button:hover {
+    background-color: #555;
+}
+
+/* Trophies */
+#trophies {
+    margin-bottom: 20px;
+}
+
+#trophies div {
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: #333;
+    border: 2px solid #555;
+}
+
+/* ==MESSAGE LOG== */
+
+
+#log {
+    margin-top: 20px;
+    background-color: #222;
+    border: 2px solid #444;
+    padding: 10px;
+    height: 80px;
+    overflow-y: auto;
+    /* scroll if too many messages */
+    font-size: 14px;
+}
