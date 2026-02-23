@@ -3,9 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Who gives a fuck</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     
+      <header>
+    <h1>Zombie Classroom Survival</h1>
+    <p id="subtitle">Survive the classroom. Defeat 3 zombies before time runs out.</p>
+  </header>
+
+  <main id="game">
+    <section id="hud">
+      <div class="hudRow">
+        <div class="hudBox">
+          <span class="hudLabel">HP</span>
+          <span id="hp" class="hudValue">10</span>
+        </div>
+
+        <div class="hudBox">
+          <span class="hudLabel">Hunger</span>
+          <span id="hunger" class="hudValue">6</span>
+        </div>
+
+        <div class="hudBox">
+          <span class="hudLabel">Thirst</span>
+          <span id="thirst" class="hudValue">6</span>
+        </div>
+      </div>
+
+      <div class="hudRow">
+        <div class="hudBox wide">
+          <span class="hudLabel">Zombies Killed</span>
+          <span id="kills" class="hudValue">0</span>
+          <span class="hudMuted">/ 3</span>
+        </div>
+
+        <div class="hudBox wide">
+          <span class="hudLabel">Turns Left</span>
+          <span id="turnsLeft" class="hudValue">8</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="scene">
+      <img id="sceneImg" src="image/classroom-zombie.png" alt="Classroom scene">
+      <p id="log">You wake up in a wrecked classroom. A zombie is between you and the door.</p>
+    </section>
+
+    <section id="controls">
+      <h2>Actions</h2>
+
+      <div id="btnRow">
+        <button id="punchBtn" type="button">Punch Zombie</button>
+        <button id="lootBtn" type="button">Loot Desk</button>
+        <button id="drinkBtn" type="button">Drink Water</button>
+        <button id="eatBtn" type="button">Eat Snack</button>
+        <button id="craftBtn" type="button">Craft Bandage</button>
+      </div>
+
+      <div id="endRow">
+        <button id="resetBtn" type="button">Reset Game</button>
+      </div>
+    </section>
+
+    <section id="inventory">
+      <h2>Inventory</h2>
+      <ul id="invList">
+        <li class="emptyInv">Empty</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>HW2: JavaScript Game</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+
 </body>
 </html>
