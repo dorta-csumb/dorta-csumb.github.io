@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Wrapper holds room on left and UI on right -->
+    <div id="gameWrapper"> 
+        
+        <!-- The room where player, zombies, and containers live -->
+        <div id="room"> 
+            
+            <!-- Player -->
+            <div id="player"></div> 
+            
+            <!-- Zombies --> 
+             <img id="zombie1" class="zombie" src="img/zombie1.png" alt="zombie"> 
+             <img id="zombie2" class="zombie" src="img/zombie2.png" alt="zombie"> 
+             <img id="zombie3" class="zombie" src="img/zombie3.png" alt="zombie"> 
+             
+             <!-- Lootable containers --> 
+             <img id="desk" class="container" src="img/desk.png" alt="desk"> 
+             <img id="fridge" class="container" src="img/fridge.png" alt="fridge"> 
+             <img id="trash" class="container" src="img/trash.png" alt="trash">
+        
+        </div> 
+        
+        <!-- UI Panel -->
+        <div id="uiPanel"> 
+            
+            <!-- Survival bars -->
+            <div id="bars">
+            <div class="barBox"> <span>Health</span>
+            <div id="healthBar" class="barFill"></div>
+            </div>
+                
+            <div class="barBox"> <span>Hunger</span>
+            <div id="hungerBar" class="barFill"></div>
+            </div>
+        
+            <div class="barBox"> <span>Thirst</span>
+            <div id="thirstBar" class="barFill"></div>
+            </div>
+                
+            <div class="barBox"> <span>XP</span>
+            <div id="xpBar" class="barFill"></div>
+            </div>
+            </div> 
+        
+            <!-- Inventory -->
+            <div id="inventory">
+            <h3>Inventory</h3>
+            <ul id="inventoryList"></ul>
+            </div> 
+        
+            <!-- Action buttons -->
+            <div id="actions"> <button id="attackBtn">Attack</button> <button id="craftBtn">Craft Club</button> </div>
+        
+            <!-- Trophies -->
+            <div id="trophies">
+            <h3>Trophies</h3>
+            <div id="trophy1"></div>
+            <div id="trophy2"></div>
+            </div>
+
+        </div>
+    </div> 
+    
+    <!-- Message log -->
+    <div id="log"></div>
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
