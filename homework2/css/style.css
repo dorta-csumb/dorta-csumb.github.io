@@ -12,66 +12,95 @@ body {
     /* puts room and UI side by side */
     gap: 20px;
     /* space between them */
+    align-items: flex-start; /* <-- prevents collapsing */
 }
 
 /* ==ROOM SETUP== */
 
 #room {
-    width: 600px;
-    height: 400px;
-    background-color: #222;
-    border: 3px solid #555;
-    position: relative;
-    /* allows absolute children */
+  width: 600px;
+  height: 400px;
+  background-image: url("../img/room.png");
+  background-size: cover;
+  background-position: center;
+  background-color: #222;
+  border: 3px solid #555;
+  position: relative;
 }
+
+
+
 
 /* Player square */
 #player {
-    width: 30px;
-    height: 30px;
-    background-color: cyan;
+    width: 150px;
+    height: 150px;
     position: absolute;
-    /* moved by JS */
-    left: 100px;
-    top: 100px;
+    left: 30px;
+    /* starting position */
+    top: 150px;
+    object-fit: cover;
+    image-rendering: pixelated;
+    z-index: 10;
+     /* ensures player is on top of zombies */  ;
 }
 
 /* Zombies */
 .zombie {
-    width: 40px;
-    height: 40px;
+    width: 150px;
+    height: 150px;
     position: absolute;
     object-fit: cover;
     /* keeps image from stretching */
     object-position: center;
     /* centers the image in the box */
     image-rendering: pixelated;
+    z-index: 5;
+     /* ensures zombies are behind player */      
 
 }
 
 /* ZOMBIE POSITIONS */
 #zombie1 {
-    left: 80px;
-    top: 50px;
+    left: 245px;
+    top: 20px;
 }
 
 #zombie2 {
-    left: 400px;
-    top: 80px;
+    left: 430px;
+    top: 200px;
 }
 
 #zombie3 {
-    left: 200px;
-    top: 300px;
+    left: 240px;
+    top: 230px;
 }
 
 /* Containers */
 .container {
-    width: 50px;
-    height: 50px;
+    width: 150px;
+    height: 150px;
     position: absolute;
     cursor: pointer;
     /* shows clickable */
+    z-index: 1;
+     /* ensures containers are behind player and zombies */
+}
+
+/* CONTAINER POSITIONS */
+#desk {
+    left: 40px;
+    top: 40px;
+}
+
+#fridge {
+    left: 380px;
+    top: 60px;
+}
+
+#trash {
+    left: 150px;
+    top: 260px;
 }
 
 /* ==UI PANEL== */
@@ -112,10 +141,13 @@ body {
 }
 
 #inventoryList {
-    list-style-type: none;
-    padding-left: 0;
-    font-size: 14px;
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 14px;
+  max-height: 120px;   /* prevents stretching */
+  overflow-y: auto;    /* scrolls instead of pushing UI down */
 }
+
 
 /* Buttons */
 #actions {
@@ -148,16 +180,16 @@ body {
     border: 2px solid #555;
 }
 
-/* ==MESSAGE LOG== */
-
+/* ==MESSAGE LOG! == */
 
 #log {
-    margin-top: 20px;
-    background-color: #222;
-    border: 2px solid #444;
-    padding: 10px;
-    height: 80px;
-    overflow-y: auto;
-    /* scroll if too many messages */
-    font-size: 14px;
+  margin-top: 20px;
+  background-color: #222;
+  border: 2px solid #444;
+  padding: 10px;
+  height: 80px;
+  max-height: 80px;
+  overflow-y: auto; /* scroll if too many messages */
+  font-size: 14px;
+  white-space: pre-line; /* allows newlines in messages */
 }
