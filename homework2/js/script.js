@@ -127,6 +127,9 @@ function checkZombies() {
 function killZombie1() {
     zombie1Alive = false;
     $("#zombie1").style.display = "none";
+    zombie1X = -9999; // move offscreen to prevent range issues
+    zombie1Y = -9999; // move offscreen to prevent range issues
+    stopZombie1Attack(); // stop the attack timer if it's running
     xp += 20;
     logMessage("Zombie 1 down!");
     updateBars();
@@ -135,6 +138,9 @@ function killZombie1() {
 function killZombie2() {
     zombie2Alive = false;
     $("#zombie2").style.display = "none";
+    zombie2X = -9999; // move offscreen to prevent range issues
+    zombie2Y = -9999; // move offscreen to prevent range issues
+    stopZombie2Attack(); // stop the attack timer if it's running
     xp += 20;
     logMessage("Zombie 2 down!");
     updateBars();
@@ -143,6 +149,9 @@ function killZombie2() {
 function killZombie3() {
     zombie3Alive = false;
     $("#zombie3").style.display = "none";
+    zombie3X = -9999; // move offscreen to prevent range issues
+    zombie3Y = -9999; // move offscreen to prevent range issues
+    stopZombie3Attack(); // stop the attack timer if it's running
     xp += 20;
     logMessage("Zombie 3 down!");
     updateBars();
@@ -240,7 +249,7 @@ $("#resetBtn").addEventListener("click", function () {
 
 
 // player death, bro: 
-// when health hits 0, log a death message and stop the game.
+// when health hits 0, log a death message and stop the game.ddd
 function checkPlayerDeath() {
     if (health <= 0) {
         health = 0;
@@ -249,11 +258,21 @@ function checkPlayerDeath() {
     }
 }
 
-function checkWin() { 
-    if (!zombie1Alive && !zombie2Alive && !zombie3Alive) { 
-        logMessage("All zombies defeated! You win!"); 
-    } 
+// == WIN CONDITION ==
+function checkWin() {
+    if (!zombie1Alive && !zombie2Alive && !zombie3Alive) {
+        logMessage("All zombies defeated! You win!");
+        unlockTrophy();
+    }
 }
+
+// ==TROPHY UNLOCK ==
+function unlockTrophy() {
+    let trophy = $("#trophy1");
+    trophy.style.backgroundColor = "gold";
+    trophy.textContent = "Winner!";
+}
+
 
 // initial setup: 
 // this runs when the page loads. 

@@ -105,14 +105,16 @@ body {
 
 /* ==UI PANEL== */
 
-
 #uiPanel {
     width: 250px;
     background-color: #1a1a1a;
     border: 3px solid #444;
     padding: 10px;
     border-radius: 5px;
+    height: 500px;        /* lock the panel height */
+    overflow-y: auto;     /* scroll inside panel */
 }
+
 
 /* Bars section */
 #bars {
