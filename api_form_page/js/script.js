@@ -95,3 +95,17 @@ function validateForm(e) {
         e.preventDefault();
     }
 }
+
+// fetch and display states on page load
+window.addEventListener("load", populateStates);
+
+async function populateStates() {
+    let url = "https://csumb.space/api/allStatesAPI.php";
+    let response = await fetch(url);
+    let data = await response.json();
+    
+    let stateSelect = document.querySelector("#state");
+    for (let i = 0; i < data.length; i++) {
+        stateSelect.innerHTML += `<option value="${data[i].usps}">${data[i].state}</option>`;
+    }
+}
