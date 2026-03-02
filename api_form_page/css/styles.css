@@ -1,0 +1,73 @@
+body {
+    font-family: Arial;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background: #005fa3;
+}
+
+span {
+    font-weight: bold;
+}
+
+#usernameError {
+    display: block;
+}
+
+#passwordError {
+    display: block;
+}
+
+#suggestedPwd {
+    display: block;
+    color: green;
+}
+
+#city, #latitude, #longitude {
+    color: #444;
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    background-color: #fafafa;
+}
+
+form input, form select {
+    border: 1px solid #aaa;
+}
