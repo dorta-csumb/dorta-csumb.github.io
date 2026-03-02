@@ -3,9 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>API Form Page</title>
 </head>
 <body>
     
+    <h1> Sign Up </h1>
+
+    <!-- Observe how this form uses 5 different form elements:
+    text input, radio buttons, a dropdown menu (select), a password field, and a submit button. -->
+
+    <!-- text input below -->
+     First Name:<input type="text" name="fName"><br>
+     Last Name: <input type="text" name="lName"><br><br>
+
+    <!-- radio buttons below -->
+     Gender:    
+         <input type="radio" name="gender" value="m">Male
+         <input type="radio" name="gender" value="f">Female
+         <input type="radio" name="gender" value="a">Alien<br><br>	
+
+    <!-- text input below -->
+      Zip Code:  <input type="text" id="zip" name="zip"><br><br>
+
+      <!-- the span id is used to display the city, latitude, and longitude information that is retrieved from the API call. -->
+    
+      City:   <span id="city"></span> <br>
+      Latitude:  <br>
+      Longitude: <br><br>
+
+      State: 
+      <select id="state" name="state">
+            <option>Select One</option> 
+            <!-- does not use "input type"; only option tags for each item in the dropdown menu -->
+            <option value="ca">California</option>
+            <option value="ny">New York</option>
+	        <option value="tx">Texas</option>
+       </select> <br>
+
+
+       Select a County: <select id="county"></select><br>
+
+
+       Desired Username: 
+       <input type="text" id="username" ><br><br>
+
+
+        Password: <input type="password">
+<span id=”suggestedPwd”></span> <br>
+        Type Password Again: <input type="password"><br>
+   
+<span id=”passwordError”></span> 
+
+         <input type="submit" value="Sign up!">
+
+</body>
+
+
 </body>
 </html>
